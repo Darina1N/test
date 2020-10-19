@@ -7,19 +7,14 @@ public class Skracovanie {
         System.out.println("Napíš nejaké slovo:");
         Scanner sc = new Scanner(System.in);
         String word = sc.nextLine();
-
         int lenghtArray = word.length();
-        int newLenght = lenghtArray;
+        int j=0;
         do {
-            if (newLenght == lenghtArray) {
-                for (int i = 0; i <lenghtArray; i++) {
+              for (int i = j; i<lenghtArray; i++) {
                     System.out.print(word.charAt(i));
                 }
-                lenghtArray--;
-            } else {
+                j++;
                 System.out.println();
-                newLenght--;
-            }
-        } while (newLenght != 0);
+            } while (j != lenghtArray);
     }
 }
